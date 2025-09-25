@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.PaymentController">
+    <children>
+
+        <TableView fx:id="tblPaymentHistory" layoutX="50.0" layoutY="140.0" prefHeight="376.0" prefWidth="901.0">
+            <columns>
+                <TableColumn fx:id="colPayID" prefWidth="107.0" text="ID" />
+                <TableColumn fx:id="colStudent_courseID" prefWidth="269.0" text="Student Course ID" />
+                <TableColumn fx:id="colDate" prefWidth="247.0" text="Date" />
+                <TableColumn fx:id="colFee" prefWidth="277.0" text="Course Fee (Rs. )" />
+            </columns>
+        </TableView>
+
+
+        <Button fx:id="btnBack" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="60.0" prefWidth="67.0" style="-fx-background-color: #66366B; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 50;" text="Back" />
+        <Label layoutX="369.0" layoutY="13.0" text="Payment History" textFill="#0d6aff" underline="true">
+            <font>
+                <Font name="Impact" size="36.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

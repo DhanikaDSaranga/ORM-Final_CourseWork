@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.InstructorCourseController">
+
+    <!-- Title -->
+    <Label layoutX="308.0" layoutY="20.0" text="Instructor - Course Assignment" textFill="#006aff" underline="true">
+        <font>
+            <Font name="Impact" size="32.0" />
+        </font>
+    </Label>
+
+    <!-- Back Button -->
+    <Button fx:id="btnBack" layoutX="3.0" layoutY="2.0" onAction="#btnBackOnAction" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: #66366B; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 50;" text="Back" />
+
+    <!-- TableView for Instructor_Course -->
+    <TableView fx:id="tblInstructorCourse" layoutX="40.0" layoutY="330.0" prefHeight="200.0" prefWidth="920.0" style="-fx-background-color: white; -fx-border-color: #dddddd;">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="112.0" text="ID" />
+            <TableColumn fx:id="colInstructor" prefWidth="171.0" text="Instructor" />
+            <TableColumn fx:id="colCourse" prefWidth="299.0" text="Course Batch" />
+            <TableColumn fx:id="colDate" prefWidth="336.0" text="Date" />
+        </columns>
+    </TableView>
+
+    <!-- Input Section -->
+    <AnchorPane layoutX="40.0" layoutY="112.0" prefHeight="210.0" prefWidth="660.0" style="-fx-background-color: #BCEBC8; -fx-background-radius: 20;">
+        <children>
+            <!-- Instructor -->
+            <Label layoutX="20.0" layoutY="54.0" style="-fx-font-size: 16px;" text="Instructor:" />
+            <ComboBox fx:id="cmbInstructor" layoutX="144.0" layoutY="56.0" onAction="#cmbInstructorOnAction" prefHeight="30.0" prefWidth="300.0" promptText="Select Instructor" style="-fx-background-color: #E6BCEB;" />
+
+            <!-- Course -->
+            <Label layoutX="20.0" layoutY="99.0" style="-fx-font-size: 16px;" text="Course:" />
+            <ComboBox fx:id="cmbCourse" layoutX="144.0" layoutY="101.0" onAction="#cmbCourseOnAction" prefHeight="30.0" prefWidth="300.0" promptText="Select Course" style="-fx-background-color: #E6BCEB;" />
+
+            <!-- Date -->
+            <Label layoutX="20.0" layoutY="147.0" style="-fx-font-size: 16px;" text="Date:" />
+            <DatePicker fx:id="dateCourse" layoutX="144.0" layoutY="149.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #E6BCEB;" />
+         <Label layoutX="22.0" layoutY="11.0" prefHeight="22.0" prefWidth="30.0" style="-fx-font-size: 16px;" text="ID :" />
+         <Label fx:id="lblID" layoutX="144.0" layoutY="14.0" prefHeight="22.0" prefWidth="125.0" style="-fx-background-color: #E6BCEB;" />
+        </children>
+    </AnchorPane>
+
+    <!-- Action Buttons -->
+    <AnchorPane layoutX="740.0" layoutY="120.0" prefHeight="180.0" prefWidth="170.0">
+        <children>
+            <Button fx:id="btnAdd" layoutX="30.0" layoutY="10.0" onAction="#btnAddOnAction" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Add">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <image>
+                            <Image url="@../images/add_icon.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="30.0" layoutY="81.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 16px;" text="Delete" />
+            <Button fx:id="btnClear" layoutX="30.0" layoutY="145.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #607D8B; -fx-text-fill: white; -fx-font-size: 16px;" text="Clear" />
+        </children>
+    </AnchorPane>
+
+</AnchorPane>
